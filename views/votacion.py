@@ -7,7 +7,7 @@ from tkinter import *
 
 def voting_section():
 
-    # window
+    # ------------ window -----------
     votacion = Tk()
     votacion.geometry('750x550')
     votacion.title('Elecciones Cali 2022')
@@ -15,7 +15,8 @@ def voting_section():
 
     h1 = Label(votacion, text='ELECCIONES CALI 2022', bg='white', font=('helvetica', 14))
 
-    # Buttons
+    # ---------- buttons ------------
+
     img_gob = PhotoImage(file="img/gobernacion.png")
     gobernacion = Button(votacion, image=img_gob, relief="raised", borderwidth=2)
 
@@ -29,7 +30,8 @@ def voting_section():
     img_salir = PhotoImage(file="img/vote.png")
     salir = Button(votacion, text='Finalizar', font=('helvetica',12), image=img_salir, compound=RIGHT)
 
-    # llamados y ubicaciones
+    # ----- llamados y ubicaciones -----
+
     h1.pack()
     h1.place(x=270, y=40)
 
