@@ -31,12 +31,12 @@ def gob():
     # img
     img_cand = PhotoImage(file="img/candidato.png")
 
-    cand_1 = Button(v_gob, text=candidatos[0][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM)
-    cand_2 = Button(v_gob, text=candidatos[1][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM)
-    cand_3 = Button(v_gob, text=candidatos[2][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM)
-    cand_4 = Button(v_gob, text=candidatos[3][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM)
-    cand_5 = Button(v_gob, text=candidatos[4][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM)
-    v_blanco = Button(v_gob, text='VOTO EN\nBLANCO', font=('helvetica', 12), width=11, height=7)
+    cand_1 = Button(v_gob, text=candidatos[0][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM, command=lambda:suma(0))
+    cand_2 = Button(v_gob, text=candidatos[1][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM, command=lambda:suma(1))
+    cand_3 = Button(v_gob, text=candidatos[2][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM, command=lambda:suma(2))
+    cand_4 = Button(v_gob, text=candidatos[3][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM, command=lambda:suma(3))
+    cand_5 = Button(v_gob, text=candidatos[4][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM, command=lambda:suma(4))
+    v_blanco = Button(v_gob, text='VOTO EN\nBLANCO', font=('helvetica', 12), width=11, height=7, command=lambda:suma(5))
 
     # img registraduria
     img3 = PhotoImage(file='img/registraduria.png')
