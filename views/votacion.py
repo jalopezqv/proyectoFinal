@@ -13,6 +13,12 @@ def voting_section():
     votacion.title('Elecciones Cali 2022')
     votacion.configure(bg='white')
 
+    # ---------- Headboard -----------
+
+    # img elecciones 2022
+    img1 = PhotoImage(file='img/elecciones2.png')
+    lbl_img1 = Label(votacion, image=img1, bg='white')
+
     h1 = Label(votacion, text='ELECCIONES CALI 2022', bg='white', font=('helvetica', 14))
 
     # ---------- buttons ------------
@@ -26,7 +32,10 @@ def voting_section():
     vgob_blanco = Button(votacion, text='VOTO EN BLANCO', height=2, width=28)
     valc_blanco = Button(votacion, text='VOTO EN BLANCO', height=2, width=28)
     
-    
+    # img registraduria
+    img2 = PhotoImage(file='img/registraduria.png')
+    lbl_img2 = Label(votacion, image=img2, bg='white')
+
     img_salir = PhotoImage(file="img/vote.png")
     salir = Button(votacion, text='Finalizar', font=('helvetica',12), image=img_salir, compound=RIGHT)
 
@@ -34,6 +43,9 @@ def voting_section():
 
     h1.pack()
     h1.place(x=270, y=40)
+
+    lbl_img1.pack()
+    lbl_img1.place(x=90, y=7)
 
     gobernacion.pack()
     gobernacion.place(x=75, y=100)
@@ -46,6 +58,9 @@ def voting_section():
 
     valc_blanco.pack()
     valc_blanco.place(x=421, y=383)
+
+    lbl_img2.pack()
+    lbl_img2.place(x=562, y=460)
 
     salir.pack()
     salir.place(x=311, y=470)
