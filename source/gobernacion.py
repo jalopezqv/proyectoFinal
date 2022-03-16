@@ -1,19 +1,5 @@
 from tkinter import *
 
-"""import sys
-from os import path
-sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )"""
-
-"""import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))"""
-
-
-"""from os import sys, path
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))"""
-
-#from views.gob import *
-
 # Matriz candidatos y sus votos
 def candidatos():
     opc_votos = [['Candidato 1', 0],
@@ -45,5 +31,3 @@ def terminar():
             candidatos[i][1]+=1
             print(candidatos)
         #Aqui debe retroceder a la vista anterior
-
-

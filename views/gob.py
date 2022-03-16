@@ -1,13 +1,4 @@
-from faulthandler import disable
 from tkinter import *
-
-"""import sys
-from os import path
-sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )"""
-
-"""import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))"""
 
 from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
@@ -41,7 +32,7 @@ def gob():
 
     def switch(n):
         config(n, cand_1, cand_2, cand_3, cand_4, cand_5, v_blanco)
-        
+
     #state=tkinter.DISABLED
     cand_1 = Button(v_gob, text=candidatos[0][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM, command=lambda:switch(0))
     cand_2 = Button(v_gob, text=candidatos[1][0], font=('helvetica', 13), image=img_cand, compound=BOTTOM, command=lambda:switch(1))
