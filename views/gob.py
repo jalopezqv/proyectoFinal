@@ -1,3 +1,7 @@
+"""
+Vista votacion por gobernacion
+"""
+
 from tkinter import *
 
 from os import sys, path

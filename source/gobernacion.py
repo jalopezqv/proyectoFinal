@@ -1,3 +1,7 @@
+"""
+Funcionalidad de vista votacion por gobernacion
+"""
+
 from tkinter import *
 
 # Matriz candidatos y sus votos

@@ -1,9 +1,12 @@
 """
-13/03/22
-Aún no esta unido a otro modulo
+Vista principal de votacion
 """
 
 from tkinter import *
+
+from os import sys, path
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+from source.votacion import *
 
 def voting_section():
 
