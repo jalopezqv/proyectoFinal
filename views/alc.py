@@ -33,7 +33,7 @@ def alc():
 
     # -------- connections --------
 
-    def prueba():
+    def salida():
         v_alc.destroy()
         terminar()
 
@@ -58,7 +58,7 @@ def alc():
 
     # boton finalizar
     img_salir = PhotoImage(file="img/vote.png")
-    salir = Button(v_alc, text='Finalizar', font=('helvetica',12), image=img_salir, compound=RIGHT, command=prueba)
+    salir = Button(v_alc, text='Finalizar', font=('helvetica',12), image=img_salir, compound=RIGHT, command=salida)
 
     # ----- llamados y ubicaciones -----
 
@@ -96,4 +96,4 @@ def alc():
     salir.place(x=320, y=475)
 
     v_alc.mainloop()
-alc()
+#alc()

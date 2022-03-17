@@ -33,7 +33,7 @@ def gob():
 
     # -------- connections --------
 
-    def prueba():
+    def salida():
         v_gob.destroy()
         terminar()
 
@@ -58,7 +58,7 @@ def gob():
 
     # boton finalizar
     img_salir = PhotoImage(file="img/vote.png")
-    salir = Button(v_gob, text='Finalizar', font=('helvetica',12), image=img_salir, compound=RIGHT, command=prueba)
+    salir = Button(v_gob, text='Finalizar', font=('helvetica',12), image=img_salir, compound=RIGHT, command=salida)
 
     # ----- llamados y ubicaciones -----
 

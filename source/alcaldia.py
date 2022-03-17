@@ -34,11 +34,11 @@ def terminar():
         if boton_marcado == i:
             candidatos_alc[i][1]+=1
             print(candidatos_alc)
-    """try:
+    try:
         from views import vot
     except ImportError:
         import sys
-        vot = sys.modules[__package__ + 'views.vot']"""
+        vot = sys.modules[__package__ + 'views.vot']
     
     #votacion = vot.votacion
     #vot.voting_section()
