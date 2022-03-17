@@ -34,4 +34,11 @@ def terminar():
         if boton_marcado == i:
             candidatos[i][1]+=1
             print(candidatos)
-        #Aqui debe retroceder a la vista anterior
+    try:
+        from views import vot
+    except ImportError:
+        import sys
+        vot = sys.modules[__package__ + 'views.vot']
+    
+    #votacion = vot.votacion
+    #vot.voting_section()
