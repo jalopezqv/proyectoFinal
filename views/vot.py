@@ -20,6 +20,7 @@ def voting_section():
     # --------- connections ----------
     
     def s_gob():
+        #gobernacion['state'] = DISABLED
         votacion.destroy()
         show_gobernacion()
     
