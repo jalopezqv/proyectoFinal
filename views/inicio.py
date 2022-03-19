@@ -2,6 +2,7 @@
 Vista de inicio
 """
 
+import opcode
 from tkinter import *
 from .vot import *
 
@@ -29,9 +30,16 @@ def inicio():
     # --------- connections ----------
 
     def s_votacion():
-        inicio.destroy()
-        show_votacion()
-        
+        cedula_votante = txt_cedula_identidad.get()
+        sexo_votante   = opcion.get()
+        if validar_votante(cedula_votante):
+            inicio.destroy()
+            show_votacion(cedula_votante, sexo_votante)
+
+        txt_cedula_identidad.delete(0,END)
+        opcion.set(None)
+
+      
     # ---------- Headboard -----------
 
     # img elecciones 2022
@@ -40,12 +48,16 @@ def inicio():
 
     h1 = Label(inicio, text='ELECCIONES CALI 2022', bg='white', font=('helvetica', 14))
 
+    # ---------- Entrys ------------
+    txt_cedula_identidad = Entry(inicio, width=10, text='Ingrese su cedula de identificacion ... ')
+    
+    # ---------- RadioButtons ------------
+    opcion = IntVar()
+    rbt_masculino = Radiobutton(inicio, text='Masculino', variable=opcion, value=1)
+    rbt_femenino  = Radiobutton(inicio, text='Femenino',  variable=opcion, value=2)
 
     # ---------- buttons ------------
-
-
-
-    votar = Button(inicio, text='VOTAR', command=s_votacion)
+    btn_votar = Button(inicio, text='VOTAR', command=s_votacion)
 
     # ----- llamados y ubicaciones -----
 
@@ -55,5 +67,15 @@ def inicio():
     lbl_img1.pack()
     lbl_img1.place(x=90, y=7)
 
-    votar.pack()
+
+    txt_cedula_identidad.pack()
+    txt_cedula_identidad.place(x=375, y= 270)
+
+    rbt_masculino.pack()
+    rbt_masculino.place(x=450, y=270)
+    rbt_femenino.pack()
+    rbt_femenino.place(x=550, y=270)
+
+    btn_votar.pack()
+    btn_votar.place(x=375, y=300)
     inicio.mainloop()
