@@ -25,7 +25,6 @@ def voting_section(state_gob, state_alc):
     
     # conectar vista votacion por alcaldia
     def s_alc():
-        votacion.destroy()
         show_alcaldia()
 
     # conectar vista de inicio
