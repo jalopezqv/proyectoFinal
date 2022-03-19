@@ -42,7 +42,6 @@ def gob():
     # -------- connections --------
 
     def volver():
-        v_gob.destroy()
         regresar()
 
     def salida():

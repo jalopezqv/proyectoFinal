@@ -42,7 +42,6 @@ def alc():
     # -------- connections --------
 
     def volver():
-        v_alc.destroy()
         regresar()
 
     def salida():
