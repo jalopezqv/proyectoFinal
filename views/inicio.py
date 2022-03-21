@@ -34,15 +34,12 @@ def inicio():
     # --------- connections ----------
 
     def s_votacion():
-        cedula_votante = ''
-        sexo_votante = ''
         cedula_votante = txt_cedula_identidad.get()
         sexo_votante   = opcion.get()
+        txt_cedula_identidad.delete(0,END)
         if validar_votante(cedula_votante, sexo_votante):
             inicio.destroy()
             show_votacion(cedula_votante, sexo_votante)
-
-        txt_cedula_identidad.delete(0,END)
         opcion.set(0)
 
          
