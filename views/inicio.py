@@ -102,7 +102,7 @@ def inicio():
     
     # ---------- RadioButtons ------------
     opcion = IntVar()
-    lbl_seleccion_sexo = Label(inicio, text='Seleccionse su genero : ', font=('helvetica', 12), bg='white')
+    lbl_seleccion_sexo = Label(inicio, text='Seleccione su genero : ', font=('helvetica', 12), bg='white')
     rbt_masculino = Radiobutton(inicio, text='Masculino', variable=opcion, value=1)
     rbt_femenino  = Radiobutton(inicio, text='Femenino',  variable=opcion, value=2)
 
