@@ -11,6 +11,7 @@ from source import resultado
 
 def result_section():
     
+
     candidato_ganador_alcalde    = resultado.candidato_ganador_alcaldia()
     candidato_ganador_gobernador = resultado.candidato_ganador_gobernacion()
 
@@ -55,6 +56,8 @@ def result_section():
     v_resultado.geometry(posicion)
 
     # ---------- Headboard -----------
+    def finalizar_votacion():
+        v_resultado.destroy()
 
     # img elecciones 2022
     img1 = PhotoImage(master=v_resultado, file='img/elecciones2.png')
@@ -70,7 +73,7 @@ def result_section():
     
     lbl_titulo1 = Label(v_resultado, image=img_gobernacion2, bg='white')
     lbl_ganador_gobernador = Label(v_resultado, image=img_candidato, bg='white')
-    lbl_nombre_cantidato_gobernador = Label(v_resultado, text=nombre_candidato_gobernador, bg='white', font=('helvetica', 10))
+    lbl_nombre_cantidato_gobernador = Label(v_resultado, text='Ganador : ' + nombre_candidato_gobernador, bg='white', font=('helvetica', 10))
     lbl_votos_cantidato_gobernador = Label(v_resultado, text='Votos Candidato : '+str(cantidad_votos_candidato_gobernador), bg='white', font=('helvetica', 10))
     lbl_votos_blanco_gobernacion = Label(v_resultado, text='Total Votos en Blanco : ' + str(cantidad_votos_blanco_gobernacion), bg='white', font=('helvetica', 10))    
     lbl_total_votos_gobernacion = Label(v_resultado, text='Cantidad Total Votos : ' + str(cantidad_total_votos_gobernacion), bg='white', font=('helvetica', 10))    
@@ -81,7 +84,7 @@ def result_section():
 
     lbl_titulo2 = Label(v_resultado, image=img_alcaldia2, bg='white')
     lbl_ganador_alcaldia = Label(v_resultado, image=img_candidato, bg='white')
-    lbl_nombre_cantidato_alcaldia = Label(v_resultado, text=nombre_candidato_alcalde, bg='white', font=('helvetica', 10))
+    lbl_nombre_cantidato_alcaldia = Label(v_resultado, text='Ganador : ' + nombre_candidato_alcalde, bg='white', font=('helvetica', 10))
     lbl_votos_cantidato_alcaldia = Label(v_resultado, text='Votos Candidato : '+str(cantidad_votos_candidato_alcalde), bg='white', font=('helvetica', 10))
     lbl_votos_blanco_alcaldia = Label(v_resultado, text='Total Votos en Blanco : ' + str(cantidad_votos_blanco_alcaldia), bg='white', font=('helvetica', 10))
     lbl_total_votos_alcaldia = Label(v_resultado, text='Cantidad Total Votos : ' + str(cantidad_total_votos_alcaldia), bg='white', font=('helvetica', 10))
@@ -90,6 +93,8 @@ def result_section():
     lbl_porcentaje_votos_hombres_alcaldia = Label(v_resultado, text='Porcentaje Votos Hombres : ' + str(round(porcentaje_votos_hombre_alcaldia,2)) + '%', bg='white', font=('helvetica', 10))    
     lbl_porcentaje_votos_mujeres_alcaldia = Label(v_resultado, text='Porcentaje Votos Mujeres : ' + str(round(porcentaje_votos_mujeres_alcaldia,2)) + '%', bg='white', font=('helvetica', 10))    
     
+    btn_cerrar_votacion = Button(v_resultado, text='Cerrar Proceso Votacion', bg='white', font=('helvetica', 10), command=finalizar_votacion)
+
     # ----- llamados y ubicaciones -----
 
     h1.pack()
@@ -140,6 +145,7 @@ def result_section():
     lbl_porcentaje_votos_mujeres_alcaldia.pack()
     lbl_porcentaje_votos_mujeres_alcaldia.place(x=470, y=480)
 
-    
+    btn_cerrar_votacion.pack()
+    btn_cerrar_votacion.place(x=550, y=40)
 
     v_resultado.mainloop()

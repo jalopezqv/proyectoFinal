@@ -81,7 +81,7 @@ def inicio():
                     top.destroy()
                     s_resultado()
                 else:
-                    messagebox.showinfo(message="La contraseña de administrados ingresada es incorrecta", title="ERROR")
+                    messagebox.showinfo(message="La contraseña de administrador ingresada es incorrecta", title="ERROR")
                     top.destroy()
 
             Button(top,text= "Validar Permisos", command= validar).pack(pady= 5,side=TOP)
@@ -108,7 +108,7 @@ def inicio():
 
     # ---------- buttons ------------
     btn_votar = Button(inicio, text='Iniciar Votacion', command=s_votacion)
-    btn_cerrar_caja = Button(inicio, text='Cerrar caja', command=popup, font=('helvetica', 12))
+    btn_cerrar_caja = Button(inicio, text='Cerrar mesa', command=popup, font=('helvetica', 12))
 
     # ----- llamados y ubicaciones -----
 
